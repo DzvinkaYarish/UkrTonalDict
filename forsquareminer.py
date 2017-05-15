@@ -10,7 +10,7 @@ def get_tips(venue_id):
     """
     url = "https://api.foursquare.com/v2/venues/%s/tips" % venue_id
 
-    data = urllib.parse.urlencode({"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "sort": "recent", "v": "20170510"})
+    data = urllib.parse.urlencode({"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "sort": "recent", "v": "20170510", "limit":"500", "offset":"1"})
     x = urllib.request.urlopen(url + "?" + data)
     x = x.read().decode("utf-8")
     return json.loads(x)['response']['tips']['items']

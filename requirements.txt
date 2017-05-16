@@ -1,0 +1,6 @@
+python > 3
+polyglot
+pycld2
+numpy
+libicu-dev
+pyicu

@@ -1,9 +1,9 @@
 import urllib.request, urllib.parse
 import json
-from olesforsquareminer import get_tips
+#from forsquareminer import get_tips
 from polyglot.detect import Detector, base
 from settings import CLIENT_ID, CLIENT_SECRET
-
+# TODO: Replace with FOURSQUARE_CLIENT_
 
 
 venues = {}
@@ -13,7 +13,9 @@ url = "https://api.foursquare.com/v2/venues/explore"
 #"ll":str(latitude) + "," + str(longitude)
 
 
+# TODO: I think it is better to save us all information about venues to sime file
 for i in range(210):
+    # TODO: Set time automaticly
     data = urllib.parse.urlencode(
                 {"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "near":"Lviv, UA", "v":"20170515", "radius": "100000",
                  "intent":"chekin", "limit":"50", "openNow":"0", "saved":"0", "specials":"0", "offset":i})
@@ -49,6 +51,7 @@ for i in range(210):
                             # print('agreeCount:', tip['agreeCount'])
                             # print('disagreeCount', tip['disagreeCount'])
                         if ukr:
+                            # TODO: I think we need to include also a venueID, just to understand what tipes of venues do we have
                             tip_dict = {'text': str(tip['text']), 'authorInteractionType': tip['authorInteractionType'],
                                         'agreeCount:': tip['agreeCount'], 'disagreeCount': tip['disagreeCount']}
                             venue_dict["tips"].append(tip_dict)

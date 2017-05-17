@@ -11,11 +11,11 @@ latitude = 49.80
 longitude = 23.88
 url = "https://api.foursquare.com/v2/venues/explore"
 #"ll":str(latitude) + "," + str(longitude)
+count_tips = 0
 
-
-for i in range(210):
+for i in range(199):
     data = urllib.parse.urlencode(
-                {"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "near":"Lviv, UA", "v":"20170515", "radius": "100000",
+                {"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "near":"Chernivtsi, UA", "v":"20170515", "radius": "10000",
                  "intent":"chekin", "limit":"50", "openNow":"0", "saved":"0", "specials":"0", "offset":i})
 
     x = urllib.request.urlopen(url + "?" + data)
@@ -49,6 +49,7 @@ for i in range(210):
                             # print('agreeCount:', tip['agreeCount'])
                             # print('disagreeCount', tip['disagreeCount'])
                         if ukr:
+                            count_tips += 1
                             tip_dict = {'text': str(tip['text']), 'authorInteractionType': tip['authorInteractionType'],
                                         'agreeCount:': tip['agreeCount'], 'disagreeCount': tip['disagreeCount']}
                             venue_dict["tips"].append(tip_dict)
@@ -60,5 +61,6 @@ for i in range(210):
 
 
 print(len(list(venues.keys())))
-with open("lviv_venues_tips.json", "w") as file:
+print(count_tips)
+with open("chernivtsi_venues_tips.json", "w") as file:
     file.write(json.dumps(venues, ensure_ascii=False))

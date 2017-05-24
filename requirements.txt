@@ -1,6 +1,5 @@
-python > 3
-polyglot
-pycld2
 numpy
-libicu-dev
+pycld2
 pyicu
+polyglot
+selenium

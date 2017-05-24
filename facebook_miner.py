@@ -1,53 +1,22 @@
-from selenium import webdriver
-import time
-from settings import FB_LOGIN, FB_PASSWORD
+import urllib.request, urllib.parse
+import json
 
-browser = webdriver.Firefox()
+FACEBOOK_ACCESS_TOKEN = "680740112135077%7CEq_CUNKKEzblfj8bkkn6GtKV1cI"
+def get_places():
+    url ="https://graph.facebook.com/v2.9/search"
+    # list of all fields https://developers.facebook.com/docs/places/fields
+    args = urllib.parse.urlencode({"type": "place", "center": "49.8397,24.0297", "distance": "1000", "fields": "name,checkins,picture", "access_token": FACEBOOK_ACCESS_TOKEN, "limit":100
+})
+    print(url + "?" + args)
+    x = urllib.request.urlopen(url + "?" + args)
+    data = json.loads(x.read().decode("utf-8"))['data']
+    parsed_data = {}
 
+    for place in data:
+        parsed_data[place['name']] = 'https://www.facebook.com/pg/%s/reviews/' % place['id']
 
-def fb_login(browser, user):
-    browser.get('https://www.facebook.com')
+    return parsed_data
 
-    login = browser.find_element_by_id('email')
-    password = browser.find_element_by_id('pass')
-    button = browser.find_element_by_id('u_0_q')
-
-    login.send_keys(user['login'])
-    password.send_keys(user['password'])
-    button.click()
-
-
-def fb_reviews(browser, pg_name):
-    url = "https://www.facebook.com/pg/%s/reviews/" % pg_name
-    browser.get(url)
-
-    while len(browser.find_elements_by_css_selector('.uiMorePager')) > 2:
-        browser.execute_script("window.scrollTo(0,document.body.scrollHeight);")
-
-    blocks = browser.find_elements_by_css_selector('.fbUserContent')
-    # print(len(blocks))
-    for block in blocks:
-        try:
-            name_block = block.find_element_by_css_selector("h5 .fwb a")
-            profile = name.get_attribute('href')
-            name = name_block.text
-        except:
-            name = block.find_element_by_css_selector("h5 .fwb .profileLink").text
-            profile = ''
-        rating = block.find_element_by_css_selector("h5 .fcg i u")
-        content = block.find_element_by_css_selector(".userContent")
-        print(name)
-        print(profile)
-        print(content.text)
-        print(rating.text)
-        print()
-
-
-user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
-
-# fb_login(browser, user)
-
-fb_reviews(browser, 'dimlegend')
-
-time.sleep(10)
-browser.quit()
+places = get_places()
+print(places)
+print(len(places))

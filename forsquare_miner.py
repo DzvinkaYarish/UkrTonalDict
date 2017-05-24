@@ -5,7 +5,7 @@ from polyglot.detect import Detector, base
 from settings import CLIENT_ID, CLIENT_SECRET
 
 
-
+cities = ["Lviv", "Ternopil", "Chernivtsi", "Rivne", "Kyiv", "Kharkiv"]
 venues = {}
 latitude = 49.80
 longitude = 23.88
@@ -13,12 +13,13 @@ url = "https://api.foursquare.com/v2/venues/explore"
 #"ll":str(latitude) + "," + str(longitude)
 count_tips = 0
 
-for i in range(199):
+for i in range(300):
     data = urllib.parse.urlencode(
-                {"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "near":"Chernivtsi, UA", "v":"20170515", "radius": "10000",
+                {"client_id": CLIENT_ID, "client_secret": CLIENT_SECRET, "near":"Lutsk, UA", "v":"20170515", "radius": "10000",
                  "intent":"chekin", "limit":"50", "openNow":"0", "saved":"0", "specials":"0", "offset":i})
 
     x = urllib.request.urlopen(url + "?" + data)
+   # print(url + "?" + data)
 
 
     items = json.loads(x.read().decode("utf-8"))["response"]["groups"][0]["items"]
@@ -62,5 +63,5 @@ for i in range(199):
 
 print(len(list(venues.keys())))
 print(count_tips)
-with open("chernivtsi_venues_tips.json", "w") as file:
+with open("lutsk_venues_tips.json", "w") as file:
     file.write(json.dumps(venues, ensure_ascii=False))

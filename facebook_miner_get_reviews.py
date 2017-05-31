@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 from settings import FB_LOGIN, FB_PASSWORD
+from facebook_miner_get_places import get_places
 
 browser = webdriver.Firefox()
 
@@ -17,8 +18,8 @@ def fb_login(browser, user):
     button.click()
 
 
-def fb_reviews(browser, pg_name):
-    url = "https://www.facebook.com/pg/%s/reviews/" % pg_name
+def fb_reviews(browser, url):
+    #url = "https://www.facebook.com/pg/%s/reviews/" % pg_name
     browser.get(url)
 
     while len(browser.find_elements_by_css_selector('.uiMorePager')) > 2:
@@ -46,8 +47,10 @@ def fb_reviews(browser, pg_name):
 user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
 
 # fb_login(browser, user)
+places  = get_places()
+for place in places:
 
-fb_reviews(browser, 'dimlegend')
+    fb_reviews(browser, places[place])
 
 time.sleep(10)
 browser.quit()

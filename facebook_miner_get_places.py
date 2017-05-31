@@ -18,5 +18,5 @@ def get_places():
     return parsed_data
 
 places = get_places()
-print(places)
-print(len(places))
+#print(places)
+#print(len(places))

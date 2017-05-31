@@ -2,8 +2,12 @@ from selenium import webdriver
 import time
 from settings import FB_LOGIN, FB_PASSWORD
 from facebook_miner_get_places import get_places
+import json
+#from polyglot.detect import Detector, base
 
 browser = webdriver.Firefox()
+
+tips = {}
 
 
 def fb_login(browser, user):
@@ -19,6 +23,7 @@ def fb_login(browser, user):
 
 
 def fb_reviews(browser, url):
+    tips_one_place = []
     #url = "https://www.facebook.com/pg/%s/reviews/" % pg_name
     browser.get(url)
 
@@ -32,16 +37,34 @@ def fb_reviews(browser, url):
             name_block = block.find_element_by_css_selector("h5 .fwb a")
             profile = name.get_attribute('href')
             name = name_block.text
+            rating = block.find_element_by_css_selector("h5 .fcg i u")
+            content = block.find_element_by_css_selector(".userContent")
         except:
-            name = block.find_element_by_css_selector("h5 .fwb .profileLink").text
-            profile = ''
-        rating = block.find_element_by_css_selector("h5 .fcg i u")
-        content = block.find_element_by_css_selector(".userContent")
-        print(name)
-        print(profile)
-        print(content.text)
-        print(rating.text)
-        print()
+            try:
+                name = block.find_element_by_css_selector("h5 .fwb .profileLink").text
+                profile = ''
+                rating = block.find_element_by_css_selector("h5 .fcg i u")
+                content = block.find_element_by_css_selector(".userContent")
+            except:
+                continue
+
+            print(content.text)
+        if(content.text):
+            # try:
+            #     lang_detector = Detector(content.text)
+            #     ukr = lang_detector.language.name == "Ukrainian"
+            # except base.UnknownLanguage:
+            #     continue
+            # if ukr:
+            tips_one_place.append([name, profile, content.text, rating.text])
+            print(name)
+            print(profile)
+            print("len" + str(len(content.text)))
+            print("text " + content.text)
+            print(rating.text)
+            print()
+    return tips_one_place
+
 
 
 user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
@@ -50,7 +73,10 @@ user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
 places  = get_places()
 for place in places:
 
-    fb_reviews(browser, places[place])
+    tips[place] = fb_reviews(browser, places[place])
 
 time.sleep(10)
 browser.quit()
+
+with open("facebook_rewiews.json", "w") as file:
+    file.write(json.dumps(tips, ensure_ascii=False))

@@ -7,7 +7,7 @@ def get_places():
     # list of all fields https://developers.facebook.com/docs/places/fields
     args = urllib.parse.urlencode({"type": "place", "center": "49.8397,24.0297", "distance": "1000", "fields": "name,checkins,picture", "access_token": FACEBOOK_ACCESS_TOKEN, "limit":100
 })
-    print(url + "?" + args)
+    #print(url + "?" + args)
     x = urllib.request.urlopen(url + "?" + args)
     data = json.loads(x.read().decode("utf-8"))['data']
     parsed_data = {}
@@ -18,5 +18,5 @@ def get_places():
     return parsed_data
 
 places = get_places()
-#print(places)
+print(places)
 #print(len(places))

@@ -77,17 +77,17 @@ if __name__ == "__main__" :
 
     fair_feature_set = []
     i = 0
-    while (len(fair_feature_set) != 400):
+    while (len(fair_feature_set) != 306):
         if uneven_feature_set[i][1] == "liked":
             fair_feature_set.append(uneven_feature_set[i])
         i+=1
     i = 0
-    while (len(fair_feature_set) != 706):
+    while (len(fair_feature_set) != 612):
         if uneven_feature_set[i][1] == "disliked":
             fair_feature_set.append(uneven_feature_set[i])
         i+=1
     i=0
-    while (len(fair_feature_set) !=1039):
+    while (len(fair_feature_set) !=918):
         if uneven_feature_set[i][1] == "meh":
             fair_feature_set.append(uneven_feature_set[i])
         i+=1
@@ -109,7 +109,7 @@ if __name__ == "__main__" :
     #test model
     print("accuracy %s" %str(nltk.classify.accuracy(classifier, test_set)))
     print(classifier.classify(
-        tip_features("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.",list(dict_words.keys())[:3000])))
+        tip_features("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.",list(dict_words.keys())[:4000])))
 
     classifier.show_most_informative_features(20)
 

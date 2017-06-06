@@ -1,0 +1,89 @@
+1496393166649	geckodriver	INFO	Listening on 127.0.0.1:49172
+1496393167709	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.W7jvQQtfLLwn
+1496393167710	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1496393167712	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35856
+
+(firefox:16374): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16374): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:16374): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16374): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1496393169616	Marionette	INFO	Listening on port 35856
+
+(/usr/lib/firefox/firefox:16442): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16442): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16442): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16442): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1496393169728	Marionette	WARN	TLS certificate errors will be ignored for this session
+1496398616971	geckodriver	INFO	Listening on 127.0.0.1:49338
+1496398618032	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.XTY0IXQuuc0k
+1496398618032	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1496398618035	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46327
+
+(firefox:16637): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16637): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:16637): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16637): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1496398619819	Marionette	INFO	Listening on port 46327
+1496398619868	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:16702): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16702): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16702): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16702): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yL/r/HDePk5rHQT_.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yL/r/HDePk5rHQT_.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yL/r/HDePk5rHQT_.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+1496486530167	geckodriver	INFO	Listening on 127.0.0.1:46922
+1496486531234	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.cCWDQzZvTRTe
+1496486531235	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1496486531237	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40372
+
+(firefox:17902): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:17902): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:17902): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:17902): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1496486533024	Marionette	INFO	Listening on port 40372
+1496486533064	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:17961): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:17961): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:17961): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:17961): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yz/r/HySICXER-QC.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yz/r/HySICXER-QC.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yz/r/HySICXER-QC.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yz/r/HySICXER-QC.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yz/r/HySICXER-QC.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/yz/r/HySICXER-QC.js, line 252: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+1496493177114	Marionette	INFO	New connections will no longer be accepted
+[Child 17961] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-EX_27g/firefox-53.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346

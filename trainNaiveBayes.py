@@ -14,23 +14,29 @@ morph = pymorphy2.MorphAnalyzer(lang='uk')
 numb_of_words_dict = 4000
 
 
-def tip_features(tip, dict_fword):
+def tip_features(words, dict_fword):
     #TODO: try to include also count
     #words = [word.lower() for sent in word_tokenize(tip) for word in sent if word not in word not in string.punctuation]
-    words = [word.lower() for sent in twtk.tokenize(tip) for word in sent if word not in word not in string.punctuation]
+    features = {}
+    for w in dict_fword:
+        features["contains %s" %w] = (w  in  words)
+    return features
 
 
+def process_tip(tip, stop_words, unique=True):
+    words = [word.lower() for sentence in twtk.tokenize(tip) for word in sentence if word not in string.punctuation and word not in stop_words]
     for i in range(1, len(words)):
         if i - 1 == "не":
            words[i] = "не" + words[i]
         words[i] = morph.parse(words[i])[0].normal_form
 
-    words = set(words)
+    if unique:
+        words = set(words)
 
-    features = {}
-    for w in dict_fword:
-        features["contains %s" %w] = (w  in  words)
-    return features
+    return words
+
+
+
 
 def read_from_file(filename):
     with open(filename, "r") as f:
@@ -42,8 +48,7 @@ def read_from_file(filename):
         myjson = json.loads(news)
     return myjson
 
-def extract_tips_text(venues_dict):
-    return [tip["text"] for idd in venues_dict for tip in venues_dict[idd]["tips"] ]
+
 
 
 
@@ -61,46 +66,45 @@ def extract_tips_text(venues_dict):
 if __name__ == "__main__" :
     #prepare data
 
-    json_tips = read_from_file("tips/all_venues_tips.json")
+
+    with open("ukrainian_stop_words", "r") as file:
+        lines = file.readlines()
+        ukr_stop_words = [word for word in lines]
+
+
+
+    json_tips = read_from_file("tips/sorted_reviews.json")
     json_odesa_tips = read_from_file("tips/odesa_venues_tips.json")
 
-    dictionary = [word.lower() for sentence in (word_tokenize(tip["text"]) for idd in json_tips for tip in json_tips[idd]["tips"] ) for word in sentence if word not in string.punctuation]
 
-    for i in range(1, len(dictionary)):
-        if i - 1 == "не":
-            dictionary[i] = "не" + dictionary[i]
-        dictionary[i] = morph.parse(dictionary[i])[0].normal_form
+    dictionary = []
+
+    for type in json_tips:
+        count = 0
+        for tip in json_tips[type]:
+            dictionary.extend(process_tip(tip, ukr_stop_words, unique=False))
+            count += 1
+            if count > 600:
+                break
+
 
     dict_words = nltk.FreqDist(dictionary)
-    dict_most_freq = [word[0 ]for word in dict_words.most_common(numb_of_words_dict)]
+    dict_most_freq = [word[0]for word in dict_words.most_common(numb_of_words_dict)]
 
 
-    uneven_feature_set = [(tip_features(tip["text"], dict_most_freq), tip["authorInteractionType"]) for idd in json_tips for tip in json_tips[idd]["tips"]]
-
+    feature_set_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "good") for tip in json_tips["good"]]  # numb of features - 5428
+    feature_set_uncertain  = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "uncertain") for tip in json_tips["uncertain"]] # numb of features - 398
+    feature_set_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["bad"]] #numb of features - 516
 
     fair_feature_set = []
-    i = 0
-    while (len(fair_feature_set) != 306):
-        if uneven_feature_set[i][1] == "liked":
-            fair_feature_set.append(uneven_feature_set[i])
-        i+=1
-    i = 0
-    while (len(fair_feature_set) != 712):
-        if uneven_feature_set[i][1] == "disliked":
-            fair_feature_set.append(uneven_feature_set[i])
-        i+=1
-    i=0
-    while (len(fair_feature_set) !=1018):
-        if uneven_feature_set[i][1] == "meh":
-            fair_feature_set.append(uneven_feature_set[i])
-        i+=1
+    fair_feature_set.extend(feature_set_good[:510])
+    fair_feature_set.extend(feature_set_uncertain[:398])
+    fair_feature_set.extend(feature_set_bad[:510])
+
+
+
     random.shuffle(fair_feature_set)
-    #
-    # count = 0
-    # for feature in uneven_feature_set:
-    #     if feature[1] == "meh":
-    #         count += 1
-    # print(count)
+
 
     train_set, test_set = fair_feature_set[100:], fair_feature_set[:100]
 

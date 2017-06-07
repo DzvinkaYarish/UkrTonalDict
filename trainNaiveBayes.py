@@ -15,8 +15,6 @@ numb_of_words_dict = 4000
 
 
 
-
-
 def tip_features(tip, dict_fword):
     #TODO: try to include also count
     #words = [word.lower() for sent in word_tokenize(tip) for word in sent if word not in word not in string.punctuation]

@@ -11,6 +11,8 @@ twtk = TweetTokenizer()
 
 morph = pymorphy2.MorphAnalyzer(lang='uk')
 
+numb_of_words_dict = 4000
+
 
 
 
@@ -57,6 +59,8 @@ def extract_tips_text(venues_dict):
 
 
 
+
+
 if __name__ == "__main__" :
     #prepare data
 
@@ -71,23 +75,25 @@ if __name__ == "__main__" :
         dictionary[i] = morph.parse(dictionary[i])[0].normal_form
 
     dict_words = nltk.FreqDist(dictionary)
-    #print(len(dict_words))
-    uneven_feature_set = [(tip_features(tip["text"], list(dict_words.keys())[:4000]), tip["authorInteractionType"]) for idd in json_tips for tip in json_tips[idd]["tips"]]
+    dict_most_freq = [word[0 ]for word in dict_words.most_common(numb_of_words_dict)]
+
+
+    uneven_feature_set = [(tip_features(tip["text"], dict_most_freq), tip["authorInteractionType"]) for idd in json_tips for tip in json_tips[idd]["tips"]]
 
 
     fair_feature_set = []
     i = 0
-    while (len(fair_feature_set) != 400):
+    while (len(fair_feature_set) != 306):
         if uneven_feature_set[i][1] == "liked":
             fair_feature_set.append(uneven_feature_set[i])
         i+=1
     i = 0
-    while (len(fair_feature_set) != 706):
+    while (len(fair_feature_set) != 712):
         if uneven_feature_set[i][1] == "disliked":
             fair_feature_set.append(uneven_feature_set[i])
         i+=1
     i=0
-    while (len(fair_feature_set) !=1039):
+    while (len(fair_feature_set) !=1018):
         if uneven_feature_set[i][1] == "meh":
             fair_feature_set.append(uneven_feature_set[i])
         i+=1
@@ -118,7 +124,7 @@ if __name__ == "__main__" :
 
     errors = []
     for (tip, label) in dev_set[:100]:
-        guess = classifier.classify(tip_features(tip, list(dict_words.keys())[:4000]))
+        guess = classifier.classify(tip_features(tip, dict_most_freq))
         if (guess != label):
             errors.append((label, guess, tip))
 

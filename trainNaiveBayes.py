@@ -97,9 +97,9 @@ if __name__ == "__main__" :
     feature_set_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["bad"]] #numb of features - 516
 
     fair_feature_set = []
-    fair_feature_set.extend(feature_set_good[:510])
-    fair_feature_set.extend(feature_set_uncertain[:398])
-    fair_feature_set.extend(feature_set_bad[:510])
+    fair_feature_set.extend(feature_set_good[:533])
+    #fair_feature_set.extend(feature_set_uncertain[:398])
+    fair_feature_set.extend(feature_set_bad[:533])
 
 
 

@@ -15,7 +15,7 @@ for file in (["tips/lviv_venues_tips.json", "tips/ternopil_venues_tips.json", "t
 print(len(list(all_venues.keys())))
 
 
-with open("all_venues_tips.json", "w") as file:
+with open("tips/all_venues_tips.json", "w") as file:
     file.write(json.dumps(all_venues, ensure_ascii=False))
 
 

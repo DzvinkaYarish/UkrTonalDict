@@ -72,13 +72,17 @@ with Xvfb() as xvfb:
     user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
 
     # fb_login(browser, user)
+
+    count = 0
     places  = get_places()
     for place in places:
-
         tips[place] = fb_reviews(browser, places[place])
+        count += len(tips[place])
 
     time.sleep(10)
     browser.quit()
 
 with open("facebook_rewiews.json", "w") as file:
     file.write(json.dumps(tips, ensure_ascii=False))
+
+print("Numb of tips: " + str(count))

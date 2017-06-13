@@ -46,3 +46,6 @@ def get_places():
 places = get_places()
 print(places)
 print(len(places))
+
+with open("tips/fb_places.json", "w") as file:
+    file.write(json.dumps(places, ensure_ascii=False))

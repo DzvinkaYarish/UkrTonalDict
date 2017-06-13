@@ -6,6 +6,16 @@ import json
 from xvfbwrapper import Xvfb
 #from polyglot.detect import Detector, base
 
+def read_from_file(filename):
+    with open(filename, "r") as f:
+        s = f.readlines()
+        news = ''
+        for stringg in s:
+            news += stringg
+
+        myjson = json.loads(news)
+    return myjson
+
 with Xvfb() as xvfb:
     browser = webdriver.Firefox()
 
@@ -74,7 +84,8 @@ with Xvfb() as xvfb:
     # fb_login(browser, user)
 
     count = 0
-    places  = get_places()
+
+    places = read_from_file("tips/fb_places.json")
     for place in places:
         tips[place] = fb_reviews(browser, places[place])
         count += len(tips[place])

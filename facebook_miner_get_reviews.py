@@ -1,7 +1,6 @@
 from selenium import webdriver
 import time
 from settings import FB_LOGIN, FB_PASSWORD
-from facebook_miner_get_places import get_places
 import json
 from xvfbwrapper import Xvfb
 #from polyglot.detect import Detector, base

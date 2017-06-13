@@ -13,12 +13,12 @@ def get_places():
     for k in range(2):
         lat = 49.8397
         longit = 24.0297
-        for i in range(10):
-            for j in range(10):
+        for i in range(20):
+            for j in range(20):
 
 
                 coord = str(lat) + "," + str(longit)
-                args = urllib.parse.urlencode({"type": "place", "center": coord, "distance": "400", "fields": "name,checkins,picture", "access_token": FACEBOOK_ACCESS_TOKEN, "limit":100
+                args = urllib.parse.urlencode({"type": "place", "center": coord, "distance": "1100", "fields": "name,checkins,picture", "access_token": FACEBOOK_ACCESS_TOKEN, "limit":100
             })
                 #print(url + "?" + args)
                 x = urllib.request.urlopen(url + "?" + args)

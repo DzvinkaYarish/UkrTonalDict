@@ -18,7 +18,7 @@ def get_places():
 
 
                 coord = str(lat) + "," + str(longit)
-                args = urllib.parse.urlencode({"type": "place", "center": coord, "distance": "200", "fields": "name,checkins,picture", "access_token": FACEBOOK_ACCESS_TOKEN, "limit":100
+                args = urllib.parse.urlencode({"type": "place", "center": coord, "distance": "400", "fields": "name,checkins,picture", "access_token": FACEBOOK_ACCESS_TOKEN, "limit":100
             })
                 #print(url + "?" + args)
                 x = urllib.request.urlopen(url + "?" + args)
@@ -29,11 +29,15 @@ def get_places():
                     parsed_data[place['name']] = 'https://www.facebook.com/pg/%s/reviews/' % place['id']
 
                 if (k == 0):
-                    lat += 0.005
+
                     longit += 0.005
                 else:
-                    lat -= 0.005
                     longit -= 0.005
+            if k == 0:
+                lat += 0.005
+            else:
+                lat -= 0.005
+
 
 
 

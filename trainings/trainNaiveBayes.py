@@ -24,7 +24,7 @@ def tip_features(words, dict_fword):
 
 
 def process_tip(tip, stop_words, unique=True):
-    words = [word.lower() for word in twtk.tokenize(tip) if word not in string.punctuation and word not in stop_words]
+    words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word not in stop_words]
     for i in range(1, len(words)):
         if i - 1 == "не":
            words[i] = "не" + words[i]

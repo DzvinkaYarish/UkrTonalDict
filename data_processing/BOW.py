@@ -75,7 +75,7 @@ BOW = {}
 for category in tips:
     count = 0
     for tip in tips[category]:
-        if count > 400:
+        if count > 500:
             break
         #for word in generate_ngrams(process_tip(tip, ukr_stop_words, unique=False)):
         for word in process_tip(tip, ukr_stop_words, unique=False):

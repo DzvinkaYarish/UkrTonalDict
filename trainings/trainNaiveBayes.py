@@ -5,6 +5,7 @@ import  string
 import nltk
 import random
 import pymorphy2
+import pickle
 
 
 twtk = TweetTokenizer()
@@ -164,3 +165,6 @@ if __name__ == "__main__" :
     print(process_tip("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words))
 
 
+    f = open('my_classifier_4.pickle', 'wb')
+    pickle.dump(classifier, f)
+    f.close()

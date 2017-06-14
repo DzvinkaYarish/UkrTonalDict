@@ -85,14 +85,23 @@ with Xvfb() as xvfb:
     count = 0
 
     places = read_from_file("tips/fb_places.json")
+    i = 0
     for place in places:
         tips[place] = fb_reviews(browser, places[place])
         count += len(tips[place])
+        i += 1
+        if i == 10:
+            with open("facebook_rewiews.json", "a") as file:
+                file.write(json.dumps(tips, ensure_ascii=False))
+            i = 0
+            tips = {}
+            print("Numb of tips: " + str(count))
+
 
     time.sleep(10)
     browser.quit()
 
-with open("facebook_rewiews.json", "w") as file:
-    file.write(json.dumps(tips, ensure_ascii=False))
+#with open("facebook_rewiews.json", "a") as file:
+ #   file.write(json.dumps(tips, ensure_ascii=False))
 
 print("Numb of tips: " + str(count))

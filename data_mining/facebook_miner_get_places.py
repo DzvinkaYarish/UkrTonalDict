@@ -13,8 +13,8 @@ def get_places():
     for k in range(2):
         lat = 49.8397
         longit = 24.0297
-        for i in range(20):
-            for j in range(20):
+        for i in range(10):
+            for j in range(10):
 
 
                 coord = str(lat) + "," + str(longit)

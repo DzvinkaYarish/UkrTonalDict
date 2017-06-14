@@ -1,5 +1,6 @@
 import json
-from trainNaiveBayes import read_from_file
+
+from trainings.trainNaiveBayes import read_from_file
 
 all_venues = {}
 

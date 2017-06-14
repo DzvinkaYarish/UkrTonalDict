@@ -67,7 +67,7 @@ if __name__ == "__main__" :
     #prepare data
 
 
-    with open("ukrainian_stop_words", "r") as file:
+    with open("dictionaries/ukrainian_stop_words", "r") as file:
         lines = file.readlines()
         ukr_stop_words = [word for word in lines]
 

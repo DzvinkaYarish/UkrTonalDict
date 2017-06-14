@@ -1,9 +1,10 @@
-import urllib.request, urllib.parse
 import json
-from olesforsquareminer import get_tips
-from polyglot.detect import Detector, base
-from settings import CLIENT_ID, CLIENT_SECRET
+import urllib.parse
 
+from polyglot.detect import Detector, base
+
+from data_mining.olesforsquareminer import get_tips
+from settings import CLIENT_ID, CLIENT_SECRET
 
 cities = ["Lviv", "Ternopil", "Chernivtsi", "Rivne", "Kyiv", "Kharkiv"]
 venues = {}

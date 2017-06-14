@@ -95,8 +95,8 @@ if __name__ == "__main__" :
     feature_set_uncertain  = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "uncertain") for tip in json_tips["uncertain"]] # numb of features - 398
     feature_set_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["bad"]] #numb of features - 516
 
-    feature_set_very_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very bad") for tip in json_tips["very bad"]] #numb of features - 516
-    feature_set_very_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very good") for tip in json_tips["very good"]] #numb of features - 516
+    feature_set_very_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["very bad"]] #numb of features - 516
+    feature_set_very_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "good") for tip in json_tips["very good"]] #numb of features - 516
 
 
     random.shuffle(feature_set_good)

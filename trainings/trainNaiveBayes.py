@@ -103,8 +103,8 @@ if __name__ == "__main__" :
     fair_feature_set = []
     fair_feature_set.extend(feature_set_good[:400])
     #fair_feature_set.extend(feature_set_uncertain[:398])
-    fair_feature_set.extend(feature_set_bad[:400])
-    fair_feature_set.extend(feature_set_very_bad[:390])
+    fair_feature_set.extend(feature_set_bad[:360])
+    fair_feature_set.extend(feature_set_very_bad[:360])
     fair_feature_set.extend(feature_set_very_good[:400])
 
 

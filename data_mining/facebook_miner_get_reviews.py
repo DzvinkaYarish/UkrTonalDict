@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-from settings import FB_LOGIN, FB_PASSWORD
+#from settings import FB_LOGIN, FB_PASSWORD
 import json
 from xvfbwrapper import Xvfb
 #from polyglot.detect import Detector, base
@@ -78,7 +78,7 @@ with Xvfb() as xvfb:
 
 
 
-    user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
+    #user = {'login': FB_LOGIN, 'password': FB_PASSWORD}
 
     # fb_login(browser, user)
 

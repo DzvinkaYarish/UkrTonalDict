@@ -26,7 +26,7 @@ def tip_features(words, dict_fword):
 
 
 def process_tip(tip, stop_words, unique=True):
-    words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word not in stop_words]
+    words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word.strip() not in stop_words]
     adjectives = []
     for i in range(0, len(words)):
         adj = False
@@ -63,7 +63,7 @@ if __name__ == "__main__" :
     with open("ukrainian_stop_words", "r") as file:
         lines = file.readlines()
         ukr_stop_words = [word.strip() for word in lines]
-    print(morph.parse("важко"))
+    
 
     #print(process_tip("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words))
 

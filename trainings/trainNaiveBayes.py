@@ -99,18 +99,28 @@ if __name__ == "__main__" :
 
 
     fair_feature_set = []
+    test_set = []
     fair_feature_set.extend(feature_set_good[:400])
+    test_set.extend(feature_set_good[400:425])
+
     #fair_feature_set.extend(feature_set_uncertain[:398])
-    fair_feature_set.extend(feature_set_bad[:360])
-    fair_feature_set.extend(feature_set_very_bad[:360])
+    fair_feature_set.extend(feature_set_bad[:350])
+    test_set.extend(feature_set_bad[350:360])
+
+
+
+    fair_feature_set.extend(feature_set_very_bad[:350])
+    test_set.extend(feature_set_very_bad[350:360])
+
     fair_feature_set.extend(feature_set_very_good[:400])
+    test_set.extend(feature_set_very_good[400:425])
 
 
 
     random.shuffle(fair_feature_set)
 
 
-    train_set, test_set = fair_feature_set[100:], fair_feature_set[:100]
+    train_set = fair_feature_set
 
 
 

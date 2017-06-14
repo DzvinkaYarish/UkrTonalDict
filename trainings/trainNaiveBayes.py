@@ -165,7 +165,7 @@ if __name__ == "__main__" :
     print(process_tip("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words))
 
 
-    if int(sys.argv[1]) <  int(accuracy):
+    if float(sys.argv[1]) <  float(accuracy):
         print("save model to file")
         f = open('my_classifier_4.pickle', 'wb')
         pickle.dump(classifier, f)

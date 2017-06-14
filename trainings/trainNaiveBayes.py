@@ -167,6 +167,7 @@ if __name__ == "__main__" :
 
 
     if int(sys.argv[0]) <  accuracy:
+        print("save model to file")
         f = open('my_classifier_4.pickle', 'wb')
         pickle.dump(classifier, f)
         f.close()

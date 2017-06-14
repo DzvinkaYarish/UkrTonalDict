@@ -6,6 +6,7 @@ import nltk
 import random
 import pymorphy2
 import pickle
+import sys
 
 
 twtk = TweetTokenizer()
@@ -155,8 +156,8 @@ if __name__ == "__main__" :
     for (label, guess, tip) in errors:
         print('correct=%-8s guess=%-8s text=%-30s' %(label, guess, tip))
 
-
-    print("accuracy %s" % str(nltk.classify.accuracy(classifier, test_set)))
+    accuracy = str(nltk.classify.accuracy(classifier, test_set))
+    print("accuracy %s" % accuracy)
     print(classifier.classify(
 
             tip_features(process_tip(
@@ -165,6 +166,7 @@ if __name__ == "__main__" :
     print(process_tip("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words))
 
 
-    f = open('my_classifier_4.pickle', 'wb')
-    pickle.dump(classifier, f)
-    f.close()
+    if int(sys.argv[0]) <  accuracy:
+        f = open('my_classifier_4.pickle', 'wb')
+        pickle.dump(classifier, f)
+        f.close()

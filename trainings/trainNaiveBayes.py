@@ -67,14 +67,14 @@ if __name__ == "__main__" :
     #prepare data
 
 
-    with open("dictionaries/ukrainian_stop_words", "r") as file:
+    with open("ukrainian_stop_words", "r") as file:
         lines = file.readlines()
         ukr_stop_words = [word.strip() for word in lines]
 
 
 
-    json_tips = read_from_file("tips/sorted_reviews.json")
-    json_odesa_tips = read_from_file("tips/odesa_venues_tips.json")
+    json_tips = read_from_file("sorted_reviews.json")
+    json_odesa_tips = read_from_file("odesa_venues_tips.json")
 
 
     dictionary = []

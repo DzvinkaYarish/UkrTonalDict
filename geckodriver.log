@@ -1,0 +1,195 @@
+1497349055860	geckodriver	INFO	Listening on 127.0.0.1:47819
+1497349056925	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.ZasWkjbNdgan
+1497349056925	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497349056928	geckodriver::marionette	INFO	Connecting to Marionette on localhost:44743
+
+(firefox:16216): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16216): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:16216): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16216): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497349058584	Marionette	INFO	Listening on port 44743
+1497349058650	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:16283): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16283): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16283): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16283): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+1497352845293	geckodriver	INFO	Listening on 127.0.0.1:45085
+1497352846359	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.cNkioRWFsMyc
+1497352846360	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497352846362	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38946
+
+(firefox:16594): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16594): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:16594): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16594): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497352848001	Marionette	INFO	Listening on port 38946
+
+(/usr/lib/firefox/firefox:16662): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16662): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16662): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16662): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497352848084	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:16594): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1551178434.
+
+
+(/usr/lib/firefox/firefox:16662): Gdk-WARNING **: /usr/lib/firefox/firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1551178434.
+
+1497353225856	geckodriver	INFO	Listening on 127.0.0.1:53758
+1497353226923	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.nZWRjiVoXJoD
+1497353226924	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497353226926	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45792
+
+(firefox:16721): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16721): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:16721): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16721): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497353228669	Marionette	INFO	Listening on port 45792
+
+(/usr/lib/firefox/firefox:16785): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16785): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497353228745	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:16785): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16785): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497353907542	geckodriver	INFO	Listening on 127.0.0.1:36820
+1497353908603	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.DHKzZ3beSuba
+1497353908603	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497353908606	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40500
+
+(firefox:16915): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16915): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:16915): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:16915): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497353910251	Marionette	INFO	Listening on port 40500
+
+(/usr/lib/firefox/firefox:16981): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16981): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16981): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:16981): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497353910322	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+
+(firefox:16915): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1209688444.
+
+
+(firefox:16721): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1545098830.
+
+1497381566327	geckodriver	INFO	Listening on 127.0.0.1:48541
+1497381567387	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.bnoOF1KyBip1
+1497381567388	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497381567394	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35080
+
+(firefox:17855): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:17855): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:17855): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:17855): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497381569153	Marionette	INFO	Listening on port 35080
+1497381569213	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:17922): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:17922): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:17922): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:17922): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+
+(firefox:17855): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :421530071.
+
+1497401071639	geckodriver	INFO	Listening on 127.0.0.1:35905
+1497401072699	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.WSVUETFdxp2O
+1497401072700	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497401072702	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39130
+
+(firefox:18374): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:18374): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:18374): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:18374): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497401074392	Marionette	INFO	Listening on port 39130
+1497401074439	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:18439): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:18439): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:18439): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:18439): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+
+(firefox:18374): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1283339025.
+

@@ -1,0 +1,98 @@
+1497434515063	geckodriver	INFO	Listening on 127.0.0.1:52899
+1497434516123	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.0ASZVzs1mBit
+1497434516124	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497434516129	geckodriver::marionette	INFO	Connecting to Marionette on localhost:36388
+
+(firefox:20716): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:20716): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:20716): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:20716): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497434517969	Marionette	INFO	Listening on port 36388
+
+(/usr/lib/firefox/firefox:20780): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20780): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20780): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20780): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497434518043	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:20716): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1035995938.
+
+
+(/usr/lib/firefox/firefox:20780): Gdk-WARNING **: /usr/lib/firefox/firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1035995938.
+
+1497434614289	geckodriver	INFO	Listening on 127.0.0.1:47184
+1497434615386	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.tLOBeRM5xcma
+1497434615388	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497434615390	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41476
+
+(firefox:20869): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:20869): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:20869): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:20869): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497434617057	Marionette	INFO	Listening on port 41476
+1497434617101	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:20930): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20930): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20930): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20930): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:20930): Gdk-WARNING **: /usr/lib/firefox/firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :800187024.
+
+
+(firefox:20869): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :800187024.
+
+1497434883714	geckodriver	INFO	Listening on 127.0.0.1:35124
+1497434884780	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.4goWQX2y6fcK
+1497434884780	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1497434884783	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45867
+
+(firefox:21022): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:21022): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(firefox:21022): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(firefox:21022): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+1497434886458	Marionette	INFO	Listening on port 45867
+1497434886500	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:21089): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:21089): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:21089): GLib-GObject-CRITICAL **: g_object_ref: assertion 'object->ref_count > 0' failed
+
+(/usr/lib/firefox/firefox:21089): GLib-GObject-CRITICAL **: g_object_unref: assertion 'object->ref_count > 0' failed
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.

@@ -32,7 +32,7 @@ def read_from_file(filename):
 
 def process_tip(tip, stop_words, unique=True):
 
-    words = [word.lower() for word in twtk.tokenize(tip) if word.strip() not in string.punctuation and word.strip() not in stop_words]
+    words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word.strip() not in stop_words]
     for i in range(1, len(words)):
         words[i] = morph.parse(words[i])[0].normal_form
 

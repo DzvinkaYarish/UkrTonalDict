@@ -98,6 +98,12 @@ if __name__ == "__main__" :
     feature_set_very_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very good") for tip in json_tips["very good"]] #numb of features - 516
 
 
+    random.shuffle(feature_set_good)
+    random.shuffle(feature_set_very_good)
+    random.shuffle(feature_set_very_bad)
+    random.shuffle(feature_set_uncertain)
+    random.shuffle(feature_set_bad)
+
 
     fair_feature_set = []
     test_set = []

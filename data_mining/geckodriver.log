@@ -96,3 +96,14 @@ JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line
 JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
 JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
 JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+JavaScript error: https://www.facebook.com/rsrc.php/v3/ya/r/X4hthPAGSOs.js, line 255: Error: The manifest specifies content that cannot be displayed on this browser/platform.
+
+(firefox:21022): Gdk-WARNING **: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1442631537.
+
+
+(/usr/lib/firefox/firefox:21089): Gdk-WARNING **: /usr/lib/firefox/firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :1442631537.
+

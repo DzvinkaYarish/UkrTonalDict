@@ -138,7 +138,6 @@ if __name__ == "__main__" :
     for (label, guess, tip) in errors:
         print('correct=%-8s guess=%-8s text=%-30s' %(label, guess, tip))
 
-        classifier.show_most_informative_features(20)
 
     print("accuracy %s" % str(nltk.classify.accuracy(classifier, test_set)))
     print(classifier.classify(

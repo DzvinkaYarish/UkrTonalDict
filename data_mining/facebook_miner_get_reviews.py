@@ -84,7 +84,7 @@ with Xvfb() as xvfb:
 
     count = 0
 
-    places = read_from_file("tips/fb_places.json")
+    places = read_from_file("/home/dzvinka/PycharmProjects/UkrTonalDict/tips/fb_places.json")
     i = 0
     for place in places:
         tips[place] = fb_reviews(browser, places[place])

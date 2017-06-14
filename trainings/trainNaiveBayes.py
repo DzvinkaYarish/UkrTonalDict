@@ -25,10 +25,8 @@ def tip_features(words, dict_fword):
 
 def process_tip(tip, stop_words, unique=True):
     words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word not in stop_words]
-    for i in range(1, len(words)):
-        if i - 1 == "не":
-           words[i] = "не" + words[i]
-        words[i] = morph.parse(words[i])[0].normal_form
+    for i in range(0, len(words)):
+       words[i] = morph.parse(words[i])[0].normal_form
 
     if unique:
         words = set(words)
@@ -132,7 +130,7 @@ if __name__ == "__main__" :
     #dev_set = [(tip, "very good") for tip in feature_set_very_good[600:1000]]
     errors = []
     for (tip, label) in dev_set[:100]:
-        guess = classifier.classify(tip_features(tip, dict_most_freq))
+        guess = classifier.classify(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq))
         if (guess != label):
             errors.append((label, guess, tip))
 

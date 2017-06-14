@@ -140,8 +140,8 @@ if __name__ == "__main__" :
 
     print("accuracy %s" % str(nltk.classify.accuracy(classifier, test_set)))
     print(classifier.classify(
-            tip_features(
-                "Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.",
+            tip_features(process_tip(
+                "Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words),
                 dict_most_freq)))
 
 

@@ -15,7 +15,7 @@ def read_from_file(filename):
     return myjson
 
 
-fb_reviews = read_from_file("tips/ukr_fb_rewiews.json")
+fb_reviews = read_from_file("/home/dzvinka/PycharmProjects/UkrTonalDict/tips/ukr_fb_rewiews.json")
 
 very_good_rewiews = []
 very_bad_rewiews = []
@@ -43,7 +43,7 @@ for venue in fb_reviews:
 print("fb " + str(count))
 
 count = 0
-forsquare_rew = read_from_file("tips/all_venues_tips.json")
+forsquare_rew = read_from_file("/home/dzvinka/PycharmProjects/UkrTonalDict/tips/all_venues_tips.json")
 
 for idd in forsquare_rew:
 
@@ -72,7 +72,7 @@ print(len(very_good_rewiews))
 print(len(very_bad_rewiews))
 
 
-with open("tips/sorted_reviews.json", "w") as file:
+with open("/home/dzvinka/PycharmProjects/UkrTonalDict/tips/sorted_reviews.json", "w") as file:
     file.write(json.dumps(all_reviews, ensure_ascii=False))
 
 

@@ -69,7 +69,7 @@ if __name__ == "__main__" :
 
     with open("dictionaries/ukrainian_stop_words", "r") as file:
         lines = file.readlines()
-        ukr_stop_words = [word for word in lines]
+        ukr_stop_words = [word.strip() for word in lines]
 
 
 
@@ -96,10 +96,16 @@ if __name__ == "__main__" :
     feature_set_uncertain  = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "uncertain") for tip in json_tips["uncertain"]] # numb of features - 398
     feature_set_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["bad"]] #numb of features - 516
 
+    feature_set_very_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very bad") for tip in json_tips["very bad"]] #numb of features - 516
+    feature_set_very_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very good") for tip in json_tips["very good"]] #numb of features - 516
+
+
     fair_feature_set = []
-    fair_feature_set.extend(feature_set_good[:533])
+    fair_feature_set.extend(feature_set_good[:400])
     #fair_feature_set.extend(feature_set_uncertain[:398])
-    fair_feature_set.extend(feature_set_bad[:533])
+    fair_feature_set.extend(feature_set_bad[:400])
+    fair_feature_set.extend(feature_set_very_bad[:360])
+    fair_feature_set.extend(feature_set_very_good[:400])
 
 
 

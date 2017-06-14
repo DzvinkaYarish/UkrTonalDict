@@ -127,9 +127,9 @@ if __name__ == "__main__" :
     classifier.show_most_informative_features(20)
 
 
-    #dev_set = [(tip["text"], tip["authorInteractionType"]) for idd in json_odesa_tips for tip in json_odesa_tips[idd]["tips"]]
+    dev_set = [(tip["text"], tip["authorInteractionType"]) for idd in json_odesa_tips for tip in json_odesa_tips[idd]["tips"]]
 
-    dev_set = [(tip, "very good") for tip in feature_set_very_good[600:1000]]
+    #dev_set = [(tip, "very good") for tip in feature_set_very_good[600:1000]]
     errors = []
     for (tip, label) in dev_set[:100]:
         guess = classifier.classify(tip_features(tip, dict_most_freq))

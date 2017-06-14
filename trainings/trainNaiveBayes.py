@@ -27,13 +27,20 @@ def tip_features(words, dict_fword):
 
 def process_tip(tip, stop_words, unique=True):
     words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word not in stop_words]
+    adjectives = []
     for i in range(0, len(words)):
-       words[i] = morph.parse(words[i])[0].normal_form
+        adj = False
+        parsers = morph.parse(words[i])
+        for parse in parsers:
+
+            if ('ADJF' in parse.tag or 'ADVB' in parse.tag) and not adj:
+                adjectives.append(parse.normal_form)
+                adj = True
 
     if unique:
-        words = set(words)
+        adjectives = set(adjectives)
 
-    return words
+    return adjectives
 
 
 
@@ -51,25 +58,17 @@ def read_from_file(filename):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__" :
     #prepare data
-
-
     with open("ukrainian_stop_words", "r") as file:
         lines = file.readlines()
         ukr_stop_words = [word.strip() for word in lines]
+    print(morph.parse("важко"))
+
+    #print(process_tip("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words))
+
+
+
 
 
 
@@ -171,3 +170,4 @@ if __name__ == "__main__" :
         f = open('my_classifier_4.pickle', 'wb')
         pickle.dump(classifier, f)
         f.close()
+

@@ -33,13 +33,28 @@ def read_from_file(filename):
 def process_tip(tip, stop_words, unique=True):
 
     words = [word.lower() for word in twtk.tokenize(tip) if word.isalpha() and word.strip() not in stop_words]
-    for i in range(1, len(words)):
-        words[i] = morph.parse(words[i])[0].normal_form
+    #for i in range(1, len(words)):
+     #   words[i] = morph.parse(words[i])[0].normal_form
+
+    #if unique:
+     #   words = set(words)
+
+    adjectives = []
+    for i in range(0, len(words)):
+        adj = False
+        parsers = morph.parse(words[i])
+        for parse in parsers:
+
+            if ('ADJF' in parse.tag or 'ADVB' in parse.tag) and not adj:
+                adjectives.append(parse.normal_form)
+                adj = True
 
     if unique:
-        words = set(words)
+        adjectives = set(adjectives)
 
-    return words
+    return adjectives
+
+    #return words
 
 
 def generate_ngrams(text):
@@ -93,9 +108,9 @@ print(items)
 items.sort(key=lambda x:sum(x[1]), reverse=True)
 
 
-file = open("my_sentiment_dict.txt", "w")
+file = open("my_sentiment_dict_adj.txt", "w")
 for item in items:
-    if sum(item[1]) > 20 and int(get_sentiment(item)) != 0:
+    if int(get_sentiment(item)) != 0:
         file.write(item[0] + ":" + get_sentiment(item) + "\n")
 
 file.close()

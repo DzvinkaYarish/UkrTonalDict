@@ -63,7 +63,7 @@ if __name__ == "__main__" :
     with open("ukrainian_stop_words", "r") as file:
         lines = file.readlines()
         ukr_stop_words = [word.strip() for word in lines]
-    
+
 
     #print(process_tip("Фірмове пиво не сподобалось. Несмачне. Загалом в закладі погано. Часом важко пересуватись між столиками.", ukr_stop_words))
 
@@ -143,11 +143,12 @@ if __name__ == "__main__" :
     classifier.show_most_informative_features(20)
 
 
-    dev_set = [(tip["text"], tip["authorInteractionType"]) for idd in json_odesa_tips for tip in json_odesa_tips[idd]["tips"]]
+    #dev_set = [(tip["text"], tip["authorInteractionType"]) for idd in json_odesa_tips for tip in json_odesa_tips[idd]["tips"]]
 
-    #dev_set = [(tip, "very good") for tip in feature_set_very_good[600:1000]]
+    random.shuffle(fair_feature_set)
+    dev_set = fair_feature_set[:100]
     errors = []
-    for (tip, label) in dev_set[:100]:
+    for (tip, label) in dev_set:
         guess = classifier.classify(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq))
         if (guess != label):
             errors.append((label, guess, tip))

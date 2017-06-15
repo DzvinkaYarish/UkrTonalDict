@@ -13,7 +13,7 @@ twtk = TweetTokenizer()
 
 morph = pymorphy2.MorphAnalyzer(lang='uk')
 
-numb_of_words_dict = 4000
+numb_of_words_dict = 2000
 
 
 def tip_features(words, dict_fword):

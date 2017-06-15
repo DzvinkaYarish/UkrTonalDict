@@ -91,9 +91,9 @@ if __name__ == "__main__" :
     dict_most_freq = [word[0]for word in dict_words.most_common(numb_of_words_dict)]
 
 
-    feature_set_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "good") for tip in json_tips["good"]]  # numb of features - 5428
+    feature_set_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very good") for tip in json_tips["good"]]  # numb of features - 5428
     feature_set_uncertain  = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "uncertain") for tip in json_tips["uncertain"]] # numb of features - 398
-    feature_set_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["bad"]] #numb of features - 516
+    feature_set_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "very bad") for tip in json_tips["bad"]] #numb of features - 516
 
     feature_set_very_bad = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "bad") for tip in json_tips["very bad"]] #numb of features - 516
     feature_set_very_good = [(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq), "good") for tip in json_tips["very good"]] #numb of features - 516
@@ -148,10 +148,10 @@ if __name__ == "__main__" :
     random.shuffle(fair_feature_set)
     dev_set = fair_feature_set[:100]
     errors = []
-    for (tip, label) in dev_set:
-        guess = classifier.classify(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq))
-        if (guess != label):
-            errors.append((label, guess, tip))
+    for tip in dev_set:
+        guess = classifier.classify(tip[0])
+        #if (guess != tip[1]):
+        errors.append((tip[1], guess, tip[0]))
 
     for (label, guess, tip) in errors:
         print('correct=%-8s guess=%-8s text=%-30s' %(label, guess, tip))

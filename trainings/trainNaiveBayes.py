@@ -148,10 +148,11 @@ if __name__ == "__main__" :
     random.shuffle(fair_feature_set)
     dev_set = fair_feature_set[:100]
     errors = []
-    for tip in dev_set:
-        guess = classifier.classify(tip[0])
-        #if (guess != tip[1]):
-        errors.append((tip[1], guess, tip[0]))
+    for (tip, label) in dev_set:
+        #guess = classifier.classify(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq))
+        guess = classifier.classify(tip)
+        #if (guess != label):
+        errors.append((label, guess, tip))
 
     for (label, guess, tip) in errors:
         print('correct=%-8s guess=%-8s text=%-30s' %(label, guess, tip))

@@ -143,14 +143,14 @@ if __name__ == "__main__" :
     classifier.show_most_informative_features(20)
 
 
-    #dev_set = [(tip["text"], tip["authorInteractionType"]) for idd in json_odesa_tips for tip in json_odesa_tips[idd]["tips"]]
+    dev_set = [(tip["text"], tip["authorInteractionType"]) for idd in json_odesa_tips for tip in json_odesa_tips[idd]["tips"]]
 
-    random.shuffle(fair_feature_set)
-    dev_set = fair_feature_set[:100]
+    #random.shuffle(fair_feature_set)
+    #dev_set = fair_feature_set[:100]
     errors = []
     for (tip, label) in dev_set:
-        #guess = classifier.classify(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq))
-        guess = classifier.classify(tip)
+        guess = classifier.classify(tip_features(process_tip(tip, ukr_stop_words), dict_most_freq))
+        #guess = classifier.classify(tip)
         #if (guess != label):
         errors.append((label, guess, tip))
 

@@ -34,6 +34,11 @@ f = open("/home/dzvinka/PycharmProjects/UkrTonalDict/models/svm.pickle", "rb")
 svc = pickle.load(f)
 f.close()
 
+f = open("/home/dzvinka/PycharmProjects/UkrTonalDict/models/random_forest.pickle", "rb")
+rf = pickle.load(f)
+f.close()
+
+
 train  = pd.read_csv("/home/dzvinka/PycharmProjects/UkrTonalDict/tips/rewiews_from_ucu_sentiment_lemmatized.csv", sep="|")
 
 vectorizer = TfidfVectorizer(ngram_range=(1, 3), max_features=8000)
@@ -43,32 +48,32 @@ data_train, data_test, labels_train, labels_test = \
                      test_size=0.1, random_state=42, stratify=train['opinion_rating'])\
 
 
-x_train = vectorizer.fit_transform(data_train)
-x_test = vectorizer.transform(data_test)
+x_train = vectorizer.fit_transform(data_train.values.astype('U'))
+x_test = vectorizer.transform(data_test.values.astype('U'))
 
 y_pred = lr.predict(x_test)
 
-y_pred_svm = svc.predict(x_test)
+y_pred_svm = rf.predict(x_test)
 
 print("Logistic regression")
 print(f1_score(labels_test, y_pred))
 print(classification_report(labels_test, y_pred))
 print()
 
-print("SVM")
+print("RF")
 print(f1_score(labels_test, y_pred_svm))
 print(classification_report(labels_test, y_pred_svm))
 print()
 
 lr_pred = lr.predict_proba(x_test)[:,1]
-svc_pred = svc.predict_proba(x_test)[:, 1]
+rf_pred = rf.predict_proba(x_test)[:, 1]
 scores = []
 
 for i in np.linspace(0, 1, 10):
 
-    res = i * lr_pred + (1 - i) * svc_pred
+    res = i * lr_pred + (1 - i) * rf_pred
     #print(res)
-    res = np.array(res >= 0.5, int)
+    res = np.array(res >= 0.4, int)
 
     scr = f1_score(labels_test, res)
     print(i, res, scr)

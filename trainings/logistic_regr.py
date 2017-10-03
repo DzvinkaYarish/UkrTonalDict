@@ -1,4 +1,4 @@
-from sklearn.model_selection import train_test_split
+from sklearn.cross_validation import train_test_split
 from sklearn.pipeline import Pipeline
 import pickle
 from sklearn.linear_model import LogisticRegression
@@ -10,7 +10,7 @@ import pandas as pd
 twtk = TweetTokenizer()
 
 # Data loading
-train = pd.read_csv("../tips/rewiews_from_ucu_sentiment_lemmatized.csv", sep="|")
+train = pd.read_csv("../tips/ukrainian_lemmatized.csv", sep="|")
 train = train[train['opinion_text'].notnull()]
 
 # Spling data into train and test  sets
@@ -30,6 +30,6 @@ print(classification_report(labels_test, y_pred_lr))
 
 # Model saving
 print("Saving LR model to file")
-f = open('../saved_models/lr.pickle', 'wb')
+f = open('../models/lr.pickle', 'wb')
 pickle.dump(mdl_lr, f)
 f.close()

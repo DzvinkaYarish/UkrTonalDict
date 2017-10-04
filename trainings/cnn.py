@@ -99,13 +99,13 @@ model.add(Flatten())
 model.add(Dropout(dropout_prob[1]))
 model.add(Dense(hidden_dims, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
-model.compile(loss='categorical_crossentropy',
+model.compile(loss='sparse_categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
 
 print(model.summary())
-
+print("Training model...")
 model.fit(x_train, y_train, batch_size=batch_size, epochs=num_epochs,
 validation_data=(x_test, y_test), verbose=2)
 

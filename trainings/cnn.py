@@ -99,7 +99,7 @@ model.add(Flatten())
 model.add(Dropout(dropout_prob[1]))
 model.add(Dense(hidden_dims, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
-model.compile(loss='sparse_categorical_crossentropy',
+model.compile(loss='binary_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
